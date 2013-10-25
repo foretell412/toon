@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: H87c1VFnvulXkecSxDrBgbWnF9HCC/s99uIKMUP+F7F98285d9I3MaWmnc5//ZkPoM0qOMeeeZT7wEr6n/B6rtY7S7kUm8e284cy2/KOcuPuKRFt8/GpGuhW/lM/4WMLLtmBS6tGkc8mZgXYb4wWQJlRVbsvkwYF6crWRwt30Y0=
+  app: calm-eyrie-8551
+  on:
+    repo: foretell412/toon
+  run: "rake db:migrate"
